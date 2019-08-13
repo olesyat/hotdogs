@@ -1,4 +1,4 @@
-#  HOT DOGS :U+1F32D:
+#  HOT DOGS :hotdog:
 > Web app for hot dog lovers (CRUD)
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)

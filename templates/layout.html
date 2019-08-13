@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HotDogs</title>
+</head>
+
+
+<style>
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: darkorange;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+    font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+}
+
+li a:hover {
+  background-color: orange;
+}
+</style>
+<body style="background-image: url('/static/hotdogs.jpg'); background-size: cover;">
+
+
+<ul>
+  <li><a href="create">CREATE</a></li>
+  <li><a href="read">READ</a></li>
+  <li><a href="update">UPDATE</a></li>
+  <li><a href="delete">DELETE</a></li>
+</ul>
+
+<div class="container">
+    {% block body %}
+    {% endblock %}
+</div>
+</body>
+</html>

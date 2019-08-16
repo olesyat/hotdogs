@@ -1,0 +1,55 @@
+.Form{
+    background-color:#ffbe76;
+    width: 600px;
+    margin: auto;
+
+}
+.Layout__title{
+    font-family: monospace;
+    font-size: xx-large;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(#d1d8e0, #ffbe76);
+}
+.Layout__button{
+    margin: auto;
+}
+.Layout__choice1{
+    font-family: monospace;
+    font-size: 40px;
+    border-radius: 10px;
+}
+.Layout__choice{
+    background-color: #d1d8e0;
+    margin: fill;
+    font-family: monospace;
+    border-radius: 50px;
+}
+
+button:hover{
+    background-color: #F79F1F;
+}
+.Layout__menu{
+    background: linear-gradient(#F79F1F, #ffbe76);
+    display: flex;
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+
+}
+.Layout__pls{
+    margin: auto;
+}
+
+.Layout__el{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+}
+
+

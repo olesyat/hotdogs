@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="Form">
+<form action = '/updated' method = 'POST'>
+    <p>Change bun:
+         <select name="name">
+          <option value={{ dog[1] }} selected>{{ dog[1] }}</option>
+          {% for b in buns %}
+             <option value={{ b }}>{{ b }}</option>
+          {% endfor %}
+         </select></p>
+    <p>Change sausage:
+         <select name="meat">
+          <option value={{ dog[2] }} selected>{{ dog[2] }}</option>
+          {% for b in meats %}
+             <option value={{ b }}>{{ b }}</option>
+          {% endfor %}
+         </select></p>
+
+    <p>mustard <input type ={{ mustard_secondary }} value={{ mustards[0] }} name="mustard" /></p>
+    <p><input type ={{ mustard_prime }} value={{ dog[3] }} name="mustard" checked/></p>
+
+    <p>ketchup <input type ={{ ketchup_secondary }} value={{ ketchups[0] }} name="ketchup" /></p>
+    <p><input type ={{ ketchup_prime }} value={{ dog[4] }} name="ketchup" checked/></p>
+
+
+    <input type="hidden" value="{{ dog[0] }}" name="id">
+    <p><input type = "submit" value = "Edit" /></p>
+      </form>
+</div>
+{% endblock %}

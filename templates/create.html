@@ -1,9 +1,37 @@
 {% extends 'layout.html' %}
 {% block body %}
 
-<form action = '/create' method = 'post'>
-<p>Enter hot dog Name:</p>
-         <p><input type = "text" name = "nm" /></p>
-         <p><input type = "submit" value = "submit" /></p>
+    <section class="Layout__title">CREATE YOUR DELICIOUS HOTDOG:</section>
+    <form action = '/create' method = 'POST'>
+    <table id="doggies">
+        <tr></tr>
+        <tr><td>
+              <p>Choose bun(bread) for your delicious hotdog:
+         <select name="name">
+          <option value='simple'>simple</option>
+          <option value='qluten-free'>gluten-free</option>
+          <option value='with-poppy-seeds'>with poppy seeds</option>
+             <option value="wholemeal">wholemeal</option>
+         </select></p></td>
+        </tr>
+        <tr><td>   <p>Choose your sausage please:
+     <select name="meat">
+      <option value='beef'>beef</option>
+      <option value='veal'>veal</option>
+      <option value='pork'>pork</option>
+         <option value="vegan">vegan</option>
+     </select></p></td></tr>
+        <tr><td>
+              <p><input type ="checkbox" value="Yes" name = "mustard"  />mustard</p>
+    <p><input type ="hidden" value="No" name = "mustard"  /></p>
+</td>
+        </tr>
+        <tr>   <td> <p><input type ="checkbox" value="Yes" name = "ketchup"  />ketchup</p>
+    <p><input type ="hidden" value="No" name = "ketchup"  /></p></td>
+</tr>
+
+    </table>
+    <div class="Layout__title"><input type = "submit" value = "Create" style="font-size: xx-large;"/></div>
       </form>
+
 {% endblock %}

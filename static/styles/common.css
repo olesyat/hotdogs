@@ -1,0 +1,59 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url('/static/hotdog.jpg');
+    background-repeat: repeat;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+input{
+    background: none;
+    font-family: monospace;
+}
+input:hover{
+     background-color: #F79F1F;
+}
+
+
+p{
+    font-family: monospace;
+    font-size: large;
+}
+
+select{
+    background-color: #F79F1F;
+    font-family: monospace;
+    font-size: large;
+    margin: 10px;
+}
+
+#doggies {
+    font-family: monospace;
+    font-size: xx-large;
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+}
+
+#doggies td, #doggies th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#doggies tr:nth-child(even){background-color: #ffbe76;}
+#doggies tr:nth-child(odd){background-color: white;}
+
+#doggies tr:hover {background-color: #ffaf40;}
+
+#doggies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #F79F1F;
+    color: white;
+}

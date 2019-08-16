@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <section class="Layout__title">HERE ARE YOUR HOTDOGS:</section>
+    <table id="doggies">
+        <tr>
+            <th>ID</th>
+            <th>BUN (BREAD)</th>
+            <th>SAUSAGE</th>
+            <th>MUSTARD</th>
+            <th>KETCHUP</th>
+            <th></th>
+        </tr>
+        {% for dog in doggies %}
+        <tr>
+        {% for feature in dog %}
+            <td>{{ feature }}</td>
+        {% endfor %}
+            <td>
+                 <form method="POST" action="/delete" >
+                      <input type="hidden" value="{{ dog[0] }}" name="trash"><input type="submit" value="Delete">
+             </form>
+
+                <form method="POST" action="/update" >
+                      <input type="hidden" value="{{ dog[0] }}" name="old"><input type="submit" value="Edit">
+             </form>
+
+               </td>
+        </tr>
+
+{% endfor %}
+    </table>
+{% endblock %}

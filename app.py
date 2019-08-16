@@ -7,7 +7,6 @@ def get_connection():
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def read():
     connection = get_connection()
@@ -24,9 +23,7 @@ def read():
         return render_template('index.html', doggies=doggies, l=len(doggies))
     else:
         return render_template("no_doggies.html")
-
-
-
+    
 @app.route('/create', methods=['POST', "GET"])
 def create_hotdog():
     if request.method == 'POST':
@@ -47,7 +44,6 @@ def create_hotdog():
     else:
         return render_template('create.html')
 
-
 @app.route('/update', methods=['POST', 'GET'])
 def update_hotdog():
     if request.method == 'POST':
@@ -65,9 +61,7 @@ def update_hotdog():
             ketchups = ['Yes', 'No']
             lst = [buns, meats, mustards, ketchups]
 
-
             for i, l in enumerate(lst):
-                print(dog[i+1], l)
                 l = l.remove(dog[i+1])
 
             mustard_prime = "hidden"
@@ -79,8 +73,7 @@ def update_hotdog():
             ketchup_secondary = "checkbox"
             if dog[4] == 'Yes':
                 ketchup_prime, ketchup_secondary = ketchup_secondary, ketchup_prime
-
-
+                
         except mysql.connector.Error as error:
             print(error)
         connection.commit()
@@ -126,4 +119,4 @@ def delete_hotdog():
         return "oops"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
